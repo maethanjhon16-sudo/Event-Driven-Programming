@@ -12,6 +12,7 @@ const sampleProducts: Product[] = [
   { id: 1, name: "Mouse", price: 19.99 },
   { id: 2, name: "Laptop", price: 29.5 },
   { id: 3, name: "Keyboard", price: 9.99 },
+  { id: 4, name: "Monitor", price: 19.99 },
 ];
 
 const App: React.FC = () => {
@@ -48,7 +49,7 @@ const App: React.FC = () => {
   };
 
   const subtotal = cart.reduce((s, i) => s + i.product.price * i.qty, 0);
-  const discountValue = Math.floor(subtotal / 150) * 2;
+  const discountValue = Math.min(100, Math.floor(subtotal / 100) * 5);
   const discountAmount = subtotal * (discountValue / 100);
   const grandTotal = Math.max(0, subtotal - discountAmount);
 

@@ -104,7 +104,7 @@ const Drawer: React.FC<Props> = ({
           }}
         >
           <Text>Auto discount</Text>
-          <Text>2% for every $150 spent</Text>
+          <Text>5% for every $100 spent</Text>
         </div>
 
         <div
